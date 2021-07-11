@@ -81,7 +81,17 @@ const makeMiddleEarth = () => {
 const makeHobbits = () => {
 
   console.log('Make hobbits');
+  
+  const $ulHobbits = $("<ul></ul>");
+  
+  for (let i = 0; i < hobbits.length; i++) {
+    const $liHobbits = $("<li></li>")
+    $liHobbits.attr("class", "hobbit");
+    ($("#The-Shire")).append($ulHobbits);
+    $ulHobbits.append($liHobbits)
+  }
 
+  
   // 1. display an unordered list of the hobbits in the shire.
 
   // 2. give each hobbit a class of "hobbit"
