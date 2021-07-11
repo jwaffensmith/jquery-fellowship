@@ -47,20 +47,17 @@ const makeMiddleEarth = () => {
   console.log("Trying to make middle earth.");
 
   // 1. create a section tag with an id of middle-earth
-
   const $middleEarth = $("<section id='middle-earth'></section>");
 
   // 2. append the section to the body of the DOM.
-
   $("body").append($middleEarth);
 
   // 3. use a for loop to iterate over the lands array that does the following:
-
   for (let i = 0; i < lands.length; i++){
     const $landsElements = $('<article></article>');
     $('#middle-earth').append($landsElements);
     $landsElements.attr("id", lands[i]).html(`<h1>${lands[i]}</h1>`);
-    } 
+    }
   
   //   3a. creates an article tag (there should be one for each land when the loop is done)
 
@@ -83,14 +80,13 @@ const makeHobbits = () => {
   console.log('Make hobbits');
   
   const $ulHobbits = $("<ul></ul>");
+  $("#The-Shire").append($ulHobbits);
   
   for (let i = 0; i < hobbits.length; i++) {
-    const $liHobbits = $("<li></li>")
-    $liHobbits.attr("class", "hobbit");
-    ($("#The-Shire")).append($ulHobbits);
-    $ulHobbits.append($liHobbits)
+    const $liHobbits = $(`<li></li>`);
+    $liHobbits.attr("class", "hobbit").html(hobbits[i]);
+    $ulHobbits.append($liHobbits);
   }
-
   
   // 1. display an unordered list of the hobbits in the shire.
 
@@ -108,10 +104,15 @@ const makeHobbits = () => {
 // ============
 // Chapter 3
 // ============
+
 const keepItSecretKeepItSafe = () => {
   
-  console.log('Keep It Secret Keep It Safe.');
+console.log('Keep It Secret Keep It Safe.');
 
+const $ring = $("<div id='the-ring'></div>");
+
+$(".hobbit").eq(0).append($ring);
+  
   // 1. create an empty div with an id of 'the-ring'
 
   // 2. add the ring as a child of Frodo
@@ -132,6 +133,15 @@ const makeBaddies = () => {
 
   console.log('Make Baddies.');
 
+const $ulBaddies = $("<ul></ul>");
+  $("#Mordor").append($ulBaddies);
+  
+  for (let i = 0; i < baddies.length; i++) {
+    const $liBaddies = $(`<li></li>`);
+    $liBaddies.attr("class", "baddy").html(baddies[i]);
+    $ulBaddies.append($liBaddies);
+  }
+  
   // 1. display an unordered list of baddies in Mordor
 
   // 2. give each of the baddies a class of "baddy"
