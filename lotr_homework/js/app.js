@@ -310,7 +310,7 @@ const itsDangerousToGoAlone = () => {
 
   $("#the-fellowship .hobbit").eq(0).appendTo("#Mordor");
 
-  $("#the-fellowship .hobbit").eq(1).appendTo("#Mordor");
+  $("#the-fellowship .hobbit").eq(0).appendTo("#Mordor");
 
   // 2. add a div with an id of 'mount-doom' to Mordor
 
@@ -326,15 +326,20 @@ const itsDangerousToGoAlone = () => {
 // ============
 // Chapter 12
 // ============
+
 const weWantsIt = () => {
 
   console.log('We Wants It');
 
   // 1. Create a div with an id of 'gollum' and add it to Mordor
 
-  // 2. Move the ring from Frodo and give it to Gollum
+  $("#Mordor").append($("<div id='gollum'></div>"));
 
+  // 2. Move the ring from Frodo and give it to Gollum
+  $("#the-ring").appendTo($("#gollum"));
+  
   // 3. Move Gollum into Mount Doom
+  $("#gollum").appendTo($("#mount-doom"));
 
 };
 
