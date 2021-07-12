@@ -337,7 +337,7 @@ const weWantsIt = () => {
 
   // 2. Move the ring from Frodo and give it to Gollum
   $("#the-ring").appendTo($("#gollum"));
-  
+
   // 3. Move Gollum into Mount Doom
   $("#gollum").appendTo($("#mount-doom"));
 
@@ -355,9 +355,19 @@ const thereAndBackAgain = () => {
 
   // 1. remove Gollum and the Ring from the DOM
 
+  $("#gollum").remove();
+
   // 2. remove all the baddies from the DOM
 
+  $(".baddy").remove();
+  $("#Mordor ul").remove();
+
   // 3. Move all the hobbits back to the shire
+  $(".hobbit").appendTo("#The-Shire");
+  
+  $("#the-fellowship ul").eq(0).appendTo("#The-Shire");
+
+  $(".hobbit").appendTo("#The-Shire ul");
 
 };
 
