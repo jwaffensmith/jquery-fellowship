@@ -209,6 +209,8 @@ const beautifulStranger = () => {
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
+$("Aside ul li").eq(3).html("Aragorn");
+
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 };
