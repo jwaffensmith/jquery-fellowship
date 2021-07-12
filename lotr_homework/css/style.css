@@ -210,4 +210,9 @@ aside ul {
     top: 385px;
   }
 
+  #the-fellowship .the-white {
+    background-color: white;
+    border: 2px solid gray;
+    padding: 5px 10px;
+  }
 }
